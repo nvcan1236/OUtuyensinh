@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khoa - Ngành</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/Style/base.css">
+    <link rel="stylesheet" href="./assets/Style/main.css">
+    <link rel="shortcut icon" href="./assets/Images/logo_mau.ico">
+</head>
+<body>
+    <header>
+        <div class="header__logo">
+            <img src="./assets/Images/logo.png" alt="">
+        </div>
+        <div class="header__menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="./index.html" class="nav__item-link">Trang chủ</a></li>
+                <li class="nav__item"><a href="#" class="nav__item-link  underline">Khoa Ngành</a></li>
+                <li class="nav__item"><a href="#" class="nav__item-link">Thông tin tuyển sinh</a></li>
+                <li class="nav__item"><a href="#" class="nav__item-link">Tra cứu</a></li>
+            </ul>
+        </div>
+        <div class="header__search">
+            <div class="search">
+                <input type="text" class="search__input" placeholder="Tìm kiếm...">
+                <div class="search__icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="infor">
+                <nav>
+                    <ul class="nav-tool">
+                        <li class="nav-tool-item current" onclick="changeProgram(1)">Chương trình đại trà</li>
+                        <li class="nav-tool-item" onclick="changeProgram(2)">Chương trình Chất lượng cao</li>
+                        <li class="nav-tool-item" onclick="changeProgram(3)">Chương trình liên kết</li>
+                    </ul>
+                </nav>
+                <div class="faculty">
+                    <h2 class="title-1">Thông tin Khoa - Ngành</h2>
+                    <div class="faculty-wrap">
+                        <ul class="faculty-list">
+                            <div class="program-intro">
+                                <h3 class="title-2 program-title">Giới thiệu Chương trình đại trà</h3>
+                                <p class="program-desc">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum debitis, officia, illo cumque omnis soluta molestiae aliquid ipsam, enim ex ipsum voluptatibus laboriosam! Animi optio laudantium voluptatum perferendis natus praesentium?
+                                </p>
+                            </div>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Đào tạo đặc biệt</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Luật kinh tế</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Ngôn ngữ Anh</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Ngôn ngữ Nhật</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Ngôn ngữ Trung</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành CNKT công trình xây dựng</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Khoa học máy tính</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Kinh tế</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Công nghệ sinh học</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Quản trị kinh doanh</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Tài chính - Ngân hàng</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Kế toán</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Công nghệ thông tin</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Công nghệ thông tin</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Hệ thống thông tin</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Khoa học máy tính</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Tài chính ngân hàng</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Tài chính ngân hàng</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Kế toán - Kiểm toán</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Kế toán</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Kiểm toán</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Quản trị kinh doanh</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Quản trị kinh doanh</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Marketing</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Kinh doanh quốc tế</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Quản trị nhân lực</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Du lịch</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Logistic và Quản lí chuỗi cung ứng</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Công nghệ sinh học</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Công nghệ sinh học</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Công nghệ thực phẩm</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Xây dựng</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Quản lý xây dựng</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Công nghệ kỹ thuật công trình xây dựng</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Luật</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Luật</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Luật kinh tế</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Kinh tế và quản lí công</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Kinh tế</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Quản lí công</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Ngoại ngữ</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Ngôn ngữ Anh</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Ngôn ngữ Trung</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Ngôn ngữ Nhật</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Ngôn ngữ Hàn</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                        </ul>
+                        <ul class="faculty-list">
+                            <div class="program-intro">
+                                <h3 class="title-2">Giới thiệu Chương trình Chất lượng cao</h3>
+                                <p class="program-desc">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum debitis, officia, illo cumque omnis soluta molestiae aliquid ipsam, enim ex ipsum voluptatibus laboriosam! Animi optio laudantium voluptatum perferendis natus praesentium?
+                                </p>
+                            </div>
+
+                            
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Tài chính ngân hàng</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Tài chính ngân hàng</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Kế toán - Kiểm toán</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Kế toán</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Kiểm toán</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Công nghệ thông tin</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Công nghệ thông tin</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Hệ thống thông tin</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Khoa học máy tính</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Quản trị kinh doanh</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Quản trị kinh doanh</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Marketing</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Kinh doanh quốc tế</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Quản trị nhân lực</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Du lịch</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Logistic và Quản lí chuỗi cung ứng</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            
+                        </ul>
+                        <ul class="faculty-list">
+                            <div class="program-intro">
+                                <h3 class="title-2">Giới thiệu Chương trình liên kết</h3>
+                                <p class="program-desc">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum debitis, officia, illo cumque omnis soluta molestiae aliquid ipsam, enim ex ipsum voluptatibus laboriosam! Animi optio laudantium voluptatum perferendis natus praesentium?
+                                </p>
+                            </div>
+
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Công nghệ thông tin</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Công nghệ thông tin</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Hệ thống thông tin</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Khoa học máy tính</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Tài chính ngân hàng</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Tài chính ngân hàng</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Kế toán - Kiểm toán</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Kế toán</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Kiểm toán</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="./assets/Images/chinhquy.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Công nghệ sinh học</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Công nghệ sinh học</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Công nghệ thực phẩm</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="side-infor side-infor-faculty">
+                <div class="news side-section">
+                    <h3 class="news__title title-1">TIN TỨC</h3>
+                    <ul class="news__list">
+                        <li class="news__item">
+                            <a href="#">
+                                <h3 class="news__item-heading">Thông báo tuyển sinh chương trình liên kết Đại học Rouen Normandie, Pháp - Khóa 5, Năm 2022</h3>
+                                <div class="news__item-time">
+                                    <i class="fa-regular fa-clock"></i> 04/03/2022
+                                </div>
+                                <div class="news__item-tag"><i class="fa-solid fa-tag"></i> Tuyển sinh</div>
+                            </a>
+                        </li>
+                        <li class="news__item">
+                            <a href="#">
+                                <h3 class="news__item-heading">Thông báo tuyển sinh chương trình liên kết Đại học Rouen Normandie, Pháp - Khóa 5, Năm 2022</h3>
+                                <div class="news__item-time">
+                                    <i class="fa-regular fa-clock"></i> 04/03/2022
+                                </div>
+                                <div class="news__item-tag"><i class="fa-solid fa-tag"></i> Tuyển sinh</div>
+                            </a>
+                        </li>
+                        <li class="news__item">
+                            <a href="#">
+                                <h3 class="news__item-heading">Thông báo tuyển sinh chương trình liên kết Đại học Rouen Normandie, Pháp - Khóa 5, Năm 2022</h3>
+                                <div class="news__item-time">
+                                    <i class="fa-regular fa-clock"></i> 04/03/2022
+                                </div>
+                                <div class="news__item-tag"><i class="fa-solid fa-tag"></i> Tuyển sinh</div>
+                            </a>
+                        </li>
+                        <li class="news__item">
+                            <a href="#">
+                                <h3 class="news__item-heading">Thông báo tuyển sinh chương trình liên kết Đại học Rouen Normandie, Pháp - Khóa 5, Năm 2022</h3>
+                                <div class="news__item-time">
+                                    <i class="fa-regular fa-clock"></i> 04/03/2022
+                                </div>
+                                <div class="news__item-tag"><i class="fa-solid fa-tag"></i> Tuyển sinh</div>
+                            </a>
+                        </li>
+                        <li class="news__item">
+                            <a href="#">
+                                <h3 class="news__item-heading">Thông báo tuyển sinh chương trình liên kết Đại học Rouen Normandie, Pháp - Khóa 5, Năm 2022</h3>
+                                <div class="news__item-time">
+                                    <i class="fa-regular fa-clock"></i> 04/03/2022
+                                </div>
+                                <div class="news__item-tag"><i class="fa-solid fa-tag"></i> Tuyển sinh</div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="video side-section">
+                    <h3 class="video__title title-1">VIDEOS</h3>
+                    <iframe width="350" height="200" src="https://www.youtube.com/embed/Us1okcXiHpA" title="Giới thiệu Trường ĐH Mở TP. Hồ Chí Minh" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="register-form side-section">
+                    <h3 class="title-1 register-form__heading">CÂU HỎI TUYỂN SINH</h3>
+                    <div class="register-form__input  form">
+                        <h1 class="title-2">Đăng kí nhận thông tin: </h1>
+                        <div class="register-form__input-item form-field">
+                            <input type="text" id="name" class="form-input" placeholder=" ">
+                            <label class="form-label" for="name">Họ tên</label>
+                        </div>
+                        <div class="register-form__input-item form-field">
+                            <input type="email" id="email" class="form-input" placeholder=" ">
+                            <label class="form-label" for="email">Email</label>
+                        </div>
+                        <div class="register-form__input-item form-field">
+                            <input type="number" id="phone" class="form-input" placeholder=" ">
+                            <label class="form-label" for="phone">Điện thoại</label>
+                        </div>
+
+                        <div class="form-field">
+                            <select id="register-seclect" class="form-input">
+                                <option value="CQ-DT">Đại học Chính quy (Hệ đại trà) </option>
+                                <option value="CQ-CLC">Đại học Chính quy (Chất lượng cao)</option>
+                                <option value="B2-LT">Bằng 2 - Liên thông</option>
+                            </select>
+                            <label for="register-seclect" class="form-label">Hệ đào tạo</label>
+                        </div>
+
+                        <div class="form-field">
+                            <textarea name="question" id="register-question" cols="30" rows="6" placeholder=" " class="form-input" ></textarea>
+                            <label for="register-question" class="form-label">Message</label>
+                        </div>
+                        <button class="primary submit">Gửi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="contact-list">
+                <div class="footer__logo">
+                    <img src="./assets/Images/logo-ngang.png" alt="OU">
+                </div>
+                <ul class="contacts">
+                    <li class="contact footer__item"><a href="#">
+                        <i class="fa-solid fa-location-dot"></i> 35-37 Hồ Hảo Hớn, P.Cô Giang, Q1, Tp.HCM
+                    </a></li>
+                    <li class="contact footer__item"><a href="#">
+                        <i class="fa-solid fa-phone"></i> 028.39207627 (08.39300072) hoặc Hotline: 1800585884
+                    </a></li>
+                    <li class="contact footer__item"><a href="#">
+                        <i class="fa-solid fa-envelope"></i> tuyensinh@ou.edu.vn
+                    </a></li>
+                </ul>
+
+                
+            </div>
+            <div class="facility-list">
+                <h3 class="title-2 footer__title">Cơ sở trực thuộc</h3>
+                <ul class="facilities">
+                    <li class="facility footer__item"><a href="#">CS 1: 97 Võ Văn Tần P6 Q3 Tp.HCM</a> </li>
+                    <li class="facility footer__item"><a href="#">CS 2: 35-37 Hồ Hảo Hớn, Phường Cô Giang, Quận 1, Tp. Hồ Chí Minh.</a> </li>
+                    <li class="facility footer__item"><a href="#">CS 3: 371 Nguyễn Kiệm, Phường 3, Quận Gò Vấp, Tp. Hồ Chí Minh.</a> </li>
+                    <li class="facility footer__item"><a href="#">CS 4: 02 Mai Thị Lựu, Phường Đa Kao, Quận 1, Tp. Hồ Chí Minh.</a> </li>
+                    <li class="facility footer__item"><a href="#">CS 5: 68 Lê Thị Trung, Tp.Thủ Dầu Một, Tỉnh Bình Dương.</a> </li>
+                    <li class="facility footer__item"><a href="#">CS 6: Phường Long Bình Tân, Tp. Biên Hòa, Tỉnh Đồng Nai.</a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>Ho Chi Minh City Open University © 2022.All Right Reserved.</p>
+                <ul class="socials">
+                    <li class="social"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li class="social"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li class="social"><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <button class="to-top"><a href="#"><i class="fa-solid fa-circle-up"></i></a></button>
+    <!-- <script src="./assets/JS/base.js"></script> -->
+    <!-- <script src="./assets/JS/main.js"></script> -->
+    <script>
+        const navItems = document.querySelectorAll(".nav-tool-item");
+        const facultyItems = document.querySelectorAll(".faculty-list");
+
+        function changeProgram(n) {
+            for(let j=0; j < navItems.length; j++) {
+                navItems[j].classList.remove('current');
+                facultyItems[j].style.display = 'none';
+            }
+            navItems[n-1].classList.add("current");      
+            facultyItems[n-1].style.display = 'block';
+        }
+    </script>
+</body>
+</html>

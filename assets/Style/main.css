@@ -1,0 +1,364 @@
+/** Trang 1: Trang chủ */
+
+
+/* slider */
+
+.slider, .slider img {
+    width: 100%;
+}
+
+.slider {
+    width: 100%;
+    
+}
+
+.infor {
+    width: 66.667%;
+}
+
+
+.attraction__infor {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 8px var(--text-color);
+    margin-top: 40px;
+}
+
+.attaction__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+}
+
+.attraction__item {
+    width: 20%;
+    font-size: 1.6rem;
+    color: #fff;
+    position: relative;
+}
+
+.attraction__item a:hover {
+    transform: scale(1.02);
+}
+
+.attraction__item a {
+    display: inline-block;
+    padding: 40px 30px;
+    color: #fff;
+    transition: 0.25s ease;
+}
+
+.attraction__icon {
+    /* margin: 0 auto; */
+    font-size: 2.4rem;
+    border-radius: 50%;
+    /* background-color: #fff; */
+    color: #fff;
+    border: 4px solid #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.attraction__title {
+    font-weight: 600;
+    height: 64px;
+    margin-top: 16px;
+}
+
+.attraction__desc {
+    margin-top: 12px;
+}
+
+.attraction__item:nth-child(odd) {
+    background-color: var(--main-bg);
+}
+
+.attraction__item:nth-child(even) {
+    background-color: var(--main-yellow);
+}
+
+/* chương trình đào tạo */
+
+.program {
+}
+
+.program__heading {
+}
+
+.program__image {
+    border-radius: 15px;
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 3px 4px 6px var(--text-color);
+    text-align: center;
+    margin-top: 24px;
+    margin-left: 24px;
+}
+
+.program__notifications {
+    margin-top: 12px;
+    list-style-type: none;
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.notification {
+    padding: 12px 24px;
+    transition: all 0.5s ease;
+}
+
+.notification + .notification {
+    border-top: 1px solid #ccc;
+}
+
+.notification:hover {
+    background-color: var(--second-bg);
+}
+
+.noti__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.noti__desc p {
+    padding: 16px 0;
+}
+
+/* Khoa Ngành */
+
+.major-programs {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--second-bg);
+    border-radius: 4px;
+    padding: 40px 20px;
+    margin-top: 16px;
+}
+
+.major-program {
+    padding: 0 12px;
+    width: 33.333%;
+    text-align: center;
+}
+
+.major-thumnail {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.major-thumnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* side infor */
+
+.side-infor {
+    width: 33.333%;
+    padding: 0 24px;
+}
+
+.news {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.news__list {
+    height: 600px;
+    overflow-y: scroll;
+    margin-top: 12px;
+    padding: 12px 24px;
+    list-style: none;
+    border: 2px solid var(--text-color);
+    border-radius: 4px;
+}
+
+.news__item {
+}
+
+.news__item:hover {
+}
+
+.news__item::after {
+    content: "-------------------------------";
+    font-weight: 100;
+    display: block;
+    top: 100%;
+    padding: 16px 0 32px;
+}
+
+.news__item-tag, .news__item-time {
+    margin-top: 12px;
+}
+
+.video {
+    border-radius: 4px;
+}
+
+.video iframe {
+    width: 100%;
+    margin-top: 12px;
+    border-radius: 4px;
+}
+
+/** Trang 2: Khoa Ngành */
+.nav-tool {
+    display: flex;
+    padding: 12px 24px 0 24px;
+    background-color: var(--main-bg);
+    color: #fff;
+    width: 100%;
+    font-size: 1.8rem;
+    justify-content: center;
+    margin-top: 24px;
+    border-radius: 15px;
+}
+
+.nav-tool-item {
+    padding: 12px 22px 20px 22px;
+    cursor: pointer;
+}
+
+.current {
+    background-color: #fff;
+    color: var(--text-color);
+    border-radius: 24px;
+    font-weight: 600;
+    position: relative;
+    border-radius: 24px 24px 0 0;
+    transition: position 0.25s ease;
+}
+
+.current::before {
+    content: "";
+    display: block;
+    background-color: var(--main-bg);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    box-shadow: -15px 15px 0 0 #fff;
+}
+
+.current::after {
+    content: "";
+    display: block;
+    background-color: var(--main-bg);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+    bottom: 0;
+    box-shadow: 15px 15px 0 0 #fff;
+}
+
+.faculty {
+}
+
+.faculty-wrap {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+}
+
+.faculty-list {
+    margin-top: 16px;
+    flex: 1 0 100%;
+    display: none;
+    animation: slideIn cubic-bezier(0.39, 0.58, 0.57, 1) 0.5s;
+}
+
+.faculty-list:first-child {
+    display: block;
+}
+
+.faculty-item {
+    display: flex;
+    border: 2px solid var(--main-yellow);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.faculty-item + .faculty-item {
+    margin-top: 16px;
+}
+
+.faculty-thumnail {
+    width: 320px;
+    height: 220px;
+}
+
+.faculty-thumnail img {
+    width: 100%;
+    object-fit: cover;
+    transition: all .2s ease-in-out;
+}
+
+.faculty-thumnail img:hover {
+    transform: scale(1.04);
+}
+
+.faculty-detail {
+    padding: 12px 24px;
+    flex: 1;
+}
+
+.program-intro {
+    margin-bottom: 40px;
+}
+
+.program-desc {
+    margin-top: 16px;
+}
+
+.faculty-name {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.major-list {
+    margin-top: 16px;
+    height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.major-item {
+    margin-left: 8px;
+    transition: 0.25s ease;
+    display: flex;
+    padding: 8px;
+}
+
+.major-item i {
+    transition: all 0.25s ease;
+    display: none;
+}
+
+.major-item:hover{
+    transform: translateX(4px);
+}
+
+.major-item:hover i {
+    display: inline;
+}
+
+.side-infor-faculty {
+    margin-top:97px;
+}
+
+
+
