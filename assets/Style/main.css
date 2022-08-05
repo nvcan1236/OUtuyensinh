@@ -9,13 +9,11 @@
 
 .slider {
     width: 100%;
-    
 }
 
 .infor {
     width: 66.667%;
 }
-
 
 .attraction__infor {
     overflow: hidden;
@@ -39,7 +37,7 @@
 }
 
 .attraction__item a:hover {
-    transform: scale(1.02);
+    transform: translateY(-8px);
 }
 
 .attraction__item a {
@@ -161,55 +159,6 @@
     object-fit: cover;
 }
 
-/* side infor */
-
-.side-infor {
-    width: 33.333%;
-    padding: 0 24px;
-}
-
-.news {
-    font-size: 1.6rem;
-    color: var(--text-color);
-}
-
-.news__list {
-    height: 600px;
-    overflow-y: scroll;
-    margin-top: 12px;
-    padding: 12px 24px;
-    list-style: none;
-    border: 2px solid var(--text-color);
-    border-radius: 4px;
-}
-
-.news__item {
-}
-
-.news__item:hover {
-}
-
-.news__item::after {
-    content: "-------------------------------";
-    font-weight: 100;
-    display: block;
-    top: 100%;
-    padding: 16px 0 32px;
-}
-
-.news__item-tag, .news__item-time {
-    margin-top: 12px;
-}
-
-.video {
-    border-radius: 4px;
-}
-
-.video iframe {
-    width: 100%;
-    margin-top: 12px;
-    border-radius: 4px;
-}
 
 /** Trang 2: Khoa Ngành */
 .nav-tool {
@@ -299,6 +248,7 @@
 .faculty-thumnail {
     width: 320px;
     height: 220px;
+    overflow: hidden;
 }
 
 .faculty-thumnail img {

@@ -451,8 +451,6 @@
         </div>
     </footer>
     <button class="to-top"><a href="#"><i class="fa-solid fa-circle-up"></i></a></button>
-    <!-- <script src="./assets/JS/base.js"></script> -->
-    <!-- <script src="./assets/JS/main.js"></script> -->
     <script>
         const navItems = document.querySelectorAll(".nav-tool-item");
         const facultyItems = document.querySelectorAll(".faculty-list");
@@ -464,6 +462,30 @@
             }
             navItems[n-1].classList.add("current");      
             facultyItems[n-1].style.display = 'block';
+        }
+        // to top btn
+        var toTopBtn = document.querySelector(".to-top");
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            toTopBtn.classList.add("show");
+        }
+        else {
+            toTopBtn.classList.remove("show");
+        }
+        }
+
+        function topFunction() {
+            document.body.scrollTo(0, 0); // For Safari
+            document.documentElement.scrollTo(0, 0); // For Chrome, Firefox, IE and Opera
+        }
+
+        toTopBtn.onclick = function() {
+            topFunction();
+        }
+
+        window.onscroll = function() {
+            scrollFunction();
         }
     </script>
 </body>

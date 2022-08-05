@@ -14,6 +14,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -23,6 +24,7 @@ html {
 
 body {
     font-size: 1.6rem;
+    
 }
 
 a {
@@ -106,8 +108,9 @@ button.to-top {
     background-color: transparent;
     box-shadow: none;
     color: var(--main-yellow);
-    opacity: 0.7;
-    transition: 0.25s ease;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 button.to-top:hover {
@@ -170,6 +173,41 @@ button.to-top:hover {
     }
 }
 
+@keyframes slideDown {
+    from {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(50px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0px);
+        opacity: 0.7;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.to-top.show {
+    opacity: 0.7;
+    transform: translateY(0);
+}
+
+.slideDown {
+    animation: slideDown 1s ease;
+}
+
+.slideUp {
+    animation: slideUp 1s ease;
+}
 /* header - start */
 
 header {
@@ -241,7 +279,7 @@ header {
 }
 
 .search__input {
-    width: 220px;
+    max-width: 220px;
     padding: 6px 20px;
     font-size: 1.4rem;
     outline: none;
@@ -361,6 +399,55 @@ header {
     margin-top: 54px;
 }
 
+/* side infor */
+
+.side-infor {
+    width: 33.333%;
+    padding-left: 48px;
+}
+
+.news {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.news__list {
+    height: 600px;
+    overflow-y: scroll;
+    margin-top: 12px;
+    padding: 12px 24px;
+    list-style: none;
+    border: 2px solid var(--text-color);
+    border-radius: 4px;
+}
+
+.news__item {
+}
+
+.news__item:hover {
+}
+
+.news__item::after {
+    content: "-------------------------------";
+    font-weight: 100;
+    display: block;
+    top: 100%;
+    padding: 16px 0 32px;
+}
+
+.news__item-tag, .news__item-time {
+    margin-top: 12px;
+}
+
+.video {
+    border-radius: 4px;
+}
+
+.video iframe {
+    width: 100%;
+    margin-top: 12px;
+    border-radius: 4px;
+}
 /* form  */
 
 .form {

@@ -62,4 +62,30 @@ window.addEventListener("load", function () {
         alert("a");
       };
   }
+  
+  // to top btn
+  var toTopBtn = document.querySelector(".to-top");
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      toTopBtn.classList.add("show");
+    }
+    else {
+      toTopBtn.classList.remove("show");
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTo(0, 0); // For Safari
+    document.documentElement.scrollTo(0, 0); // For Chrome, Firefox, IE and Opera
+  }
+
+  toTopBtn.onclick = function() {
+    topFunction();
+  }
+
+  window.onscroll = function() {
+    scrollFunction();
+  }
 });
+
