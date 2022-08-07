@@ -84,8 +84,25 @@ window.addEventListener("load", function () {
     topFunction();
   }
 
+  // window.onscroll = function() {
+  // }
+
+  // header 
+  var header = document.querySelector("header");
+  var headerLogo = document.querySelector(".header__logo");
+  function scrollFunction2() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      header.classList.add("fixed");
+      headerLogo.style = "display: none;"
+    }
+    else {
+      header.classList.remove("fixed");
+      headerLogo.style = "display: block;"
+    }
+  }
   window.onscroll = function() {
     scrollFunction();
+    scrollFunction2();
   }
 });
 
