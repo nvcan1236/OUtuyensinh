@@ -14,10 +14,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/Style/base.css">
     <link rel="stylesheet" href="./assets/Style/main.css">
+    <link rel="stylesheet" href="./assets/Style/responsive.css">
     <link rel="shortcut icon" href="./assets/Images/logo_mau.ico">
     <title>Tuyển sinh OU - Home</title>
 </head>
 <body>
+    <div class="loading">
+        <div class="dots-loading">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+    </div>
     <header>
         <div class="header__logo">
             <img src="./assets/Images/logo.png" alt="">
@@ -115,85 +124,85 @@
                     <h2 class="program__heading title-1">TUYỂN SINH ĐẠI HỌC CHÍNH QUY</h2>
                     <div class="program__thumnail">
                         <img src="./assets/Images/SV4.jpg" alt="dai hoc chinh quy" class="program__image">
-                        <ul class="program__notifications">
-                            <li class="notification">
-                                <a href="#">
-                                    <div class="noti__title">Thông báo v/v Ngưỡng điểm nhận hồ sơ đăng ký xét tuyển kết quả thi tốt nghiệp THPT năm 2022</div>
-                                    <div class="noti__desc">
-                                        <p>THÔNG BÁO NGƯỠNG ĐIỂM NHẬN HỒ SƠ ĐĂNG KÝ XÉT TUYỂN KẾT QUẢ THI TỐT NGHIỆP THPT VÀO ĐẠI HỌC CHÍNH QUY NĂM 2022 (Mã phương thức: 100 - Mã trường: MBS)...</p>
-                                    </div>
-                                    <div class="noti__time">
-                                        <i class="fa-regular fa-clock"></i> 01/08/2022 09:33
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="notification">
-                                <a href="#">
-                                    <div class="noti__title">Thông báo về việc đăng ký xét tuyển đại học chính quy năm 2022 - Phương thức xét tuyển điểm Kỳ thi tốt nghiệp THPT 2022</div>
-                                    <div class="noti__desc">
-                                        <p>HĐTS Trường Đại học Mở Thành phố Hồ Chí Minh thông báo việc đăng ký xét tuyển vào đại học chính quy năm 2022 như sau:...</p>
-                                    </div>
-                                    <div class="noti__time">
-                                        <i class="fa-regular fa-clock"></i> 25/07/2022 11:08
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="notification">
-                                <a href="#">
-                                    <div class="noti__title">Thông báo kết quả đợt xét tuyển học bạ Đại học Chính quy 2022</div>
-                                    <div class="noti__desc">
-                                        <p>TRƯỜNG ĐẠI HỌC MỞ TP.HCM (MÃ TRƯỜNG: MBS) THÔNG BÁO Kết quả xét tuyển các phương thức 3 đến 6 (đợt Học bạ) trình độ Đại học Chính quy 2022...</p>
-                                    </div>
-                                    <div class="noti__time">
-                                        <i class="fa-regular fa-clock"></i> 15/07/2022 16:39
-                                    </div>
-                                </a>
-                            </li>
-                            <button class="secondary see-more">Xem thêm</button>
-                        </ul>
                     </div>
+                    <ul class="program__notifications">
+                        <li class="notification">
+                            <a href="#">
+                                <div class="noti__title">Thông báo v/v Ngưỡng điểm nhận hồ sơ đăng ký xét tuyển kết quả thi tốt nghiệp THPT năm 2022</div>
+                                <div class="noti__desc">
+                                    <p>THÔNG BÁO NGƯỠNG ĐIỂM NHẬN HỒ SƠ ĐĂNG KÝ XÉT TUYỂN KẾT QUẢ THI TỐT NGHIỆP THPT VÀO ĐẠI HỌC CHÍNH QUY NĂM 2022 (Mã phương thức: 100 - Mã trường: MBS)...</p>
+                                </div>
+                                <div class="noti__time">
+                                    <i class="fa-regular fa-clock"></i> 01/08/2022 09:33
+                                </div>
+                            </a>
+                        </li>
+                        <li class="notification">
+                            <a href="#">
+                                <div class="noti__title">Thông báo về việc đăng ký xét tuyển đại học chính quy năm 2022 - Phương thức xét tuyển điểm Kỳ thi tốt nghiệp THPT 2022</div>
+                                <div class="noti__desc">
+                                    <p>HĐTS Trường Đại học Mở Thành phố Hồ Chí Minh thông báo việc đăng ký xét tuyển vào đại học chính quy năm 2022 như sau:...</p>
+                                </div>
+                                <div class="noti__time">
+                                    <i class="fa-regular fa-clock"></i> 25/07/2022 11:08
+                                </div>
+                            </a>
+                        </li>
+                        <li class="notification">
+                            <a href="#">
+                                <div class="noti__title">Thông báo kết quả đợt xét tuyển học bạ Đại học Chính quy 2022</div>
+                                <div class="noti__desc">
+                                    <p>TRƯỜNG ĐẠI HỌC MỞ TP.HCM (MÃ TRƯỜNG: MBS) THÔNG BÁO Kết quả xét tuyển các phương thức 3 đến 6 (đợt Học bạ) trình độ Đại học Chính quy 2022...</p>
+                                </div>
+                                <div class="noti__time">
+                                    <i class="fa-regular fa-clock"></i> 15/07/2022 16:39
+                                </div>
+                            </a>
+                        </li>
+                        <button class="secondary see-more">Xem thêm</button>
+                    </ul>
                 </div>
                 <div class="program2 program main-section">
                     <h2 class="program__heading title-1">TUYỂN SINH ĐH BẰNG 2 VÀ LIÊN THÔNG CĐ - ĐH</h2>
                     <div class="program__thumnail">
                         <img src="./assets/Images/SV6.jpg" alt="dai hoc chinh quy" class="program__image">
-                        <ul class="program__notifications">
-                            <li class="notification">
-                                <a href="#">
-                                    <div class="noti__title">Thông báo tuyển sinh trình độ đào tạo đại học với đối tượng tốt nghiệp đại học (Đại học bằng thứ 2) - hình thức đào tạo chính quy năm 2022</div>
-                                    <div class="noti__desc">
-                                        <p>Trường Đại học Mở Thành phố Hồ Chí Minh thông báo tuyển sinh đào tạo trình độ Đại học đối với đối tượng tốt nghiệp Đại học, hình thức đào tạo chính quy 2022 như sau...</p>
-                                    </div>
-                                    <div class="noti__time">
-                                        <i class="fa-regular fa-clock"></i> 20/07/2022 14:35
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="notification">
-                                <a href="#">
-                                    <div class="noti__title">Thông báo tuyển sinh đào tạo trình độ đại học với đối tượng tốt nghiệp cao đẳng - hình thức đào tạo chính quy 2022</div>
-                                    <div class="noti__desc">
-                                        <p>Trường Đại học Mở Thành phố Hồ Chí Minh thông báo tuyển sinh đào tạo trình độ Đại học đối với đối tượng tốt nghiệp Cao đẳng, hình thức đào tạo chính quy 2022 như sau...</p>
-                                    </div>
-                                    <div class="noti__time">
-                                        <i class="fa-regular fa-clock"></i> 20/07/2022 14:49
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="notification">
-                                <a href="#">
-                                    <div class="noti__title">Thông tin các loại tài khoản Văn bằng 2, Liên thông CĐ-ĐH, Khóa 2021</div>
-                                    <div class="noti__desc">
-                                        <p>Tài khoản Học viên thực hiện đăng nhập để kiểm tra hoạt động của tài khoản và thường xuyên theo dõi và sử dụng các loại tài khoản này để kịp thời cập nhật những thông tin liên quan đến học tập và thời khóa biểu...</p>
-                                    </div>
-                                    <div class="noti__time">
-                                        <i class="fa-regular fa-clock"></i> 01/10/2021 09:47
-                                    </div>
-                                </a>
-                            </li>
-                            <button class="secondary see-more">Xem thêm</button>
-                        </ul>
                     </div>
+                    <ul class="program__notifications">
+                        <li class="notification">
+                            <a href="#">
+                                <div class="noti__title">Thông báo tuyển sinh trình độ đào tạo đại học với đối tượng tốt nghiệp đại học (Đại học bằng thứ 2) - hình thức đào tạo chính quy năm 2022</div>
+                                <div class="noti__desc">
+                                    <p>Trường Đại học Mở Thành phố Hồ Chí Minh thông báo tuyển sinh đào tạo trình độ Đại học đối với đối tượng tốt nghiệp Đại học, hình thức đào tạo chính quy 2022 như sau...</p>
+                                </div>
+                                <div class="noti__time">
+                                    <i class="fa-regular fa-clock"></i> 20/07/2022 14:35
+                                </div>
+                            </a>
+                        </li>
+                        <li class="notification">
+                            <a href="#">
+                                <div class="noti__title">Thông báo tuyển sinh đào tạo trình độ đại học với đối tượng tốt nghiệp cao đẳng - hình thức đào tạo chính quy 2022</div>
+                                <div class="noti__desc">
+                                    <p>Trường Đại học Mở Thành phố Hồ Chí Minh thông báo tuyển sinh đào tạo trình độ Đại học đối với đối tượng tốt nghiệp Cao đẳng, hình thức đào tạo chính quy 2022 như sau...</p>
+                                </div>
+                                <div class="noti__time">
+                                    <i class="fa-regular fa-clock"></i> 20/07/2022 14:49
+                                </div>
+                            </a>
+                        </li>
+                        <li class="notification">
+                            <a href="#">
+                                <div class="noti__title">Thông tin các loại tài khoản Văn bằng 2, Liên thông CĐ-ĐH, Khóa 2021</div>
+                                <div class="noti__desc">
+                                    <p>Tài khoản Học viên thực hiện đăng nhập để kiểm tra hoạt động của tài khoản và thường xuyên theo dõi và sử dụng các loại tài khoản này để kịp thời cập nhật những thông tin liên quan đến học tập và thời khóa biểu...</p>
+                                </div>
+                                <div class="noti__time">
+                                    <i class="fa-regular fa-clock"></i> 01/10/2021 09:47
+                                </div>
+                            </a>
+                        </li>
+                        <button class="secondary see-more">Xem thêm</button>
+                    </ul>
                 </div>
                 <div class="majors-infor main-section">
                     <h2 class="title-1">Thông tin Khoa - Ngành</h2>
@@ -318,8 +327,19 @@
                         <button class="primary submit">Gửi</button>
                     </div>
                 </div>
+                <div class="fan-page side-section">
+                    <h3 class="video__title title-1">GROUPS FB</h3>
+                    <a href="https://www.facebook.com/groups/oumembers"><img src="./assets/Images/fanpage.jpg" alt="" class="fanpage-img"></a>
+                </div>
             </div>
         </div>
+        <div class="container">
+            <div class="map">
+                <h3 class="title-1">BẢN ĐỒ CƠ SỞ NGUYỄN KIỆM</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.925119729195!2d106.6749189145894!3d10.817042392293967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e1f241211f%3A0xc9ef195798144b1f!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBN4bufIFRQLkhDTSAtIEPGoSBz4bufIDM!5e0!3m2!1svi!2s!4v1660059596862!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            </div>
+        <button class="chat-btn"><i class="fa-brands fa-facebook-messenger"></i></button>
+        <button class="to-top"><a href="#"><i class="fa-solid fa-circle-up"></i></a></button>
     </section>
     <footer>
         <div class="container">
@@ -364,7 +384,7 @@
             </div>
         </div>
     </footer>
-    <button class="to-top"><a href="#"><i class="fa-solid fa-circle-up"></i></a></button>
+    
     <script src="./assets/JS/base.js"></script>
     <script src="./assets/JS/main.js"></script>
 </body>

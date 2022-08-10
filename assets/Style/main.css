@@ -89,7 +89,7 @@
 
 .program__image {
     border-radius: 15px;
-    width: 450px;
+    max-width: 450px;
     height: 300px;
     object-fit: cover;
     box-shadow: 3px 4px 6px var(--text-color);
@@ -168,6 +168,16 @@
     border-radius: 50%;
     object-fit: cover;
     
+}
+
+.map {
+    width: 100%;
+}
+
+.map iframe{
+    box-shadow: 3px 4px 6px #ccc;
+    border-radius: 4px;
+    margin-top: 12px;
 }
 
 

@@ -65,13 +65,16 @@ window.addEventListener("load", function () {
   
   // to top btn
   var toTopBtn = document.querySelector(".to-top");
+  var chatBtn = document.querySelector("button.chat-btn");
 
   function scrollFunction() {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
       toTopBtn.classList.add("show");
+      chatBtn.style = "bottom: 84px;"
     }
     else {
       toTopBtn.classList.remove("show");
+      chatBtn.style = "bottom: 24px;"
     }
   }
 
@@ -104,5 +107,6 @@ window.addEventListener("load", function () {
     scrollFunction();
     scrollFunction2();
   }
+  // chat button
 });
 

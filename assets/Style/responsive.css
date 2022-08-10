@@ -1,0 +1,116 @@
+@media (max-width : 739px){
+    .side-infor {
+        display: none;
+    }
+
+    .title-1 {
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .title-2 {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    button.to-top, button.chat-btn {
+        right: 8px;
+        bottom: 8px;
+    }
+    
+    .infor {
+        width: 100%;
+    }
+    .container + .container {
+        margin-top: 16px;
+    }
+
+    header {
+        padding: 0;
+    }
+
+    .header__search {
+        display: none;
+    }
+    .header__logo {
+        display: none !important;
+    }
+    .attraction__infor {
+        margin: 30px 20px 0;
+    }
+
+    .attraction__item {
+        width: 100%;
+    }
+
+    .attraction__icon {
+        margin: 0 auto;
+    }
+
+    .attraction__title {
+        max-height: 32px;
+    }
+
+    .attraction__item a {
+        padding: 20px 40px;
+        text-align: center;
+    }
+
+    .program__thumnail {
+        padding: 0 20px;
+    }
+
+    .program__image {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+
+    .major-programs {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .major-program {
+        width: 100%;
+    }
+
+    .major-program + .major-program {
+        margin-top: 40px;
+    }
+
+    .map iframe {
+        height: 200px;
+    }
+
+    footer {
+        margin-top: 16px;
+    }
+
+    .footer__logo img {
+        max-width: 100%;
+    }
+    footer .container{
+        flex-direction: column;
+    }
+
+    footer .container:last-child{
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+
+    .socials {
+        margin-bottom: 12px;
+    }
+
+    .facility-list, .contact-list {
+        width: 100%;
+        padding: 12px;
+    }
+    .facilities {
+        margin-top: 8px;
+    }
+}
+
