@@ -36,6 +36,19 @@
     .header__logo {
         display: none !important;
     }
+    .slider-prev, .slider-next {
+        font-size: 2.8rem;
+    }
+    .slider-prev {
+        left: 0px;
+    }
+    .slider-next {
+        right: 0px;
+    }
+    .slider-dot {
+        width: 6px;
+        height: 6px;
+    }
     .attraction__infor {
         margin: 30px 20px 0;
     }
@@ -82,7 +95,7 @@
     }
 
     .map iframe {
-        height: 200px;
+        height: 300px;
     }
 
     footer {

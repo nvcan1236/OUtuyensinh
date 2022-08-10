@@ -5,7 +5,7 @@
     --main-bg: #00468f;
     --second-bg: #e8f0fe;
     --text-color: #06283D;
-    --main-yellow: #e8ab42c3;
+    /* --main-yellow: #e8ab42c3; */
     --main-yellow: #e8aa42;
 }
 
@@ -26,7 +26,7 @@ html {
 body {
     font-size: 1.6rem;
     /* overflow: hidden; */
-    width: 100vw;
+    /* width: 100vw; */
 }
 
 a {
@@ -157,8 +157,6 @@ button.to-top:hover {
     opacity: 1;
 }
 
-
-
 /* underline */
 
 .underline {
@@ -179,8 +177,71 @@ button.to-top:hover {
 
 /* loading */
 .loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+    background-image: linear-gradient(to right bottom, var(--text-color), var(--main-bg), var(--main-yellow), #FFF8BC);
     
 }
+.dots-loading {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+ }
+ 
+ .dots-loading > div {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: var(--text-color);
+    margin: 0 1rem;
+    animation: dotLoading 1.2s forwards infinite linear;
+ }
+ 
+ .dots-loading > div:nth-child(2) {
+    background-color: var(--main-bg);
+    animation-delay: 0.15s;
+ }
+ 
+ .dots-loading > div:nth-child(3) {
+    background-color: var(--main-yellow);
+    animation-delay: 0.3s;
+ }
+ 
+ .dots-loading > div:nth-child(4) {
+    background-color: #FFF8BC;
+    animation-delay: 0.45s;
+ }
+ 
+ @keyframes dotLoading {
+    to {
+       opacity: 0;
+    }
+ }
+ .square-loading {
+    width: 120px;
+    height: 120px;
+    padding: 8px;
+    background-color: var(--main-bg);
+    color: #fff;
+    border-radius: 50%;
+  }
+
+  .square-loading img {
+    width: 100%;
+    height: 100%;
+    margin-top: 2px;
+  }
+  
 
 /* title */
 
@@ -657,7 +718,7 @@ footer > .container {
     display: inline-block;
     font-size: 3.2rem;
     width: 24px;
-    margin-right: 24px;
+    margin:0 12px;
 }
 
 .copyright {

@@ -1,4 +1,16 @@
 window.addEventListener("load", function () {
+  // loading
+  var loader = document.querySelector(".loading");
+  this.setTimeout(function() {
+    document.documentElement.scrollTo(0, document.body.scrollHeight);
+    setTimeout(function() {
+      document.documentElement.scrollTo(0, 0);
+    }, 500)
+    setTimeout(function() {
+      loader.style = "display: none;";
+    }, 1000)
+  }, 4000);
+
   // slider
   const slider = document.querySelector(".slider");
   const sliderMain = document.querySelector(".slider-main");
