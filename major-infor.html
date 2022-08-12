@@ -146,7 +146,7 @@
                                     <h3 class="title-2 faculty-name">Khoa Xây dựng</h3>
                                     <ul class="major-list">
                                         <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Quản lý xây dựng</a></li>
-                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Công nghệ kỹ thuật công trình xây dựng</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Công nghệ kỹ thuật CTXD</a></li>
                                     </ul>
                                 </div>
                             </a></li>
@@ -204,7 +204,7 @@
                             </div>
 
                             
-                            <li class="faculty-item"><a href="#">
+                            <li class="faculty-item vertical"><a href="#">
                                 <div class="faculty-thumnail">
                                     <img src="./assets/Images/K.DTDB.jpg" alt="">
                                 </div>
@@ -221,7 +221,7 @@
                                         <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Luật kinh tế</a></li>
                                         <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Công nghệ sinh học</a></li>
                                         <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Khoa học máy tính</a></li>
-                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Công nghệ kỹ thuật công trình xây dựng</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Công nghệ kỹ thuật CTXD</a></li>
                                     </ul>
                                 </div>
                             </a></li>
@@ -423,7 +423,8 @@
             </div>
         </div>
     </footer>
-    <button class="to-top"><a href="#"><i class="fa-solid fa-circle-up"></i></a></button>
+        <button class="chat-btn"><i class="fa-brands fa-facebook-messenger"></i></button>
+        <button class="to-top"><a href="#"><i class="fa-solid fa-circle-up"></i></a></button>
     <script>
         const navItems = document.querySelectorAll(".nav-tool-item");
         const facultyItems = document.querySelectorAll(".faculty-list");
@@ -438,15 +439,28 @@
         }
         // to top btn
         var toTopBtn = document.querySelector(".to-top");
+        var chatBtn = document.querySelector("button.chat-btn");
 
         function scrollFunction() {
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
             toTopBtn.classList.add("show");
-        }
-        else {
+            chatBtn.style = "bottom: 84px;"
+            }
+            else {
             toTopBtn.classList.remove("show");
+            chatBtn.style = "bottom: 24px;"
+            }
         }
-        }
+        // var toTopBtn = document.querySelector(".to-top");
+
+        // function scrollFunction() {
+        // if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        //     toTopBtn.classList.add("show");
+        // }
+        // else {
+        //     toTopBtn.classList.remove("show");
+        // }
+        // }
 
         function topFunction() {
             document.body.scrollTo(0, 0); // For Safari
@@ -476,6 +490,14 @@
         window.onscroll = function() {
             scrollFunction();
             scrollFunction2();
+        }
+        // major list on mobile
+        const facultyItem = document.querySelectorAll('.faculty-item');
+
+        if(document.body.clientWidth < 739 || document.documentElement.clientWidth < 739) {
+            for(let f of facultyItem) {
+                f.classList.add('vertical')
+            }
         }
     </script>
 </body>

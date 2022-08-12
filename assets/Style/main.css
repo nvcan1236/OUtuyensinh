@@ -262,6 +262,25 @@
     overflow: hidden;
 }
 
+.faculty-item.vertical {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 8px 8px 0;
+    text-align: center;
+}
+
+.faculty-item.vertical .faculty-detail {
+    width: 100%;
+}
+
+.faculty-item.vertical .major-list {
+    height: auto;
+}
+.faculty-item.vertical .major-item {
+    margin: 0;
+    width: 100%;
+}
 .faculty-item + .faculty-item {
     margin-top: 16px;
 }

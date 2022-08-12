@@ -120,5 +120,19 @@ window.addEventListener("load", function () {
     scrollFunction2();
   }
   // chat button
+  // side section on mobile
+  const sideInfor = document.querySelector(".side-infor");
+  const swipeBtn = document.querySelector(".swipe-left-btn");
+  if(document.body.clientWidth < 739 || document.documentElement.clientWidth < 739) {
+    // sideInfor.classList.add("fixed");
+    // sideInfor.classList.add("hide");
+    swipeBtn.onclick = function() {
+      sideInfor.classList.toggle("fixed");
+      swipeBtn.classList.toggle("swipe-left-btn");
+      swipeBtn.classList.toggle("swipe-right-btn");
+    }
+  }
+
+  
 });
 

@@ -113,6 +113,7 @@ button.to-top {
     transform: translateY(100px);
     opacity: 0;
     transition: all 1s ease;
+    z-index: 3;
 }
 
 button.chat-btn {
@@ -157,6 +158,38 @@ button.to-top:hover {
     opacity: 1;
 }
 
+button.swipe-btn {
+    display: none;
+}
+button.swipe-left-btn {
+    position: fixed;
+    top: 50%;
+    z-index: 12;
+    background-color: var(--main-yellow);
+    padding: 24px 6px;
+    opacity: 0.3;
+    transition: 0.2s ease;
+    box-shadow: none;
+    border-radius: 12px 0 0 12px;
+    right: 0;
+}
+.swipe-right-btn {
+    position: fixed;
+    top: 50%;
+    z-index: 12;
+    background-color: var(--main-yellow);
+    padding: 24px 6px;
+    opacity: 0.3;
+    transition: 0.2s ease;
+    box-shadow: none;
+    left: 0;
+    border-radius: 12px 0 0 12px;
+    transform: scaleX(-1);
+}
+
+button.swipe-left-btn:hover {
+    opacity: 1
+}
 /* underline */
 
 .underline {
@@ -301,7 +334,9 @@ button.to-top:hover {
 }
 
 .hide {
+    opacity: 0;
     display: none;
+
 }
 
 .to-top.show {
@@ -332,7 +367,6 @@ header {
 header.fixed {
     position: fixed;
     top: 0;
-    /* left: ; */
     box-shadow: 0 2px 8px #333;
     width: 100%;
     z-index: 10;
@@ -525,8 +559,32 @@ header.fixed {
 .side-infor {
     width: 33.333%;
     padding-left: 48px;
+    transition: all 0.3s ease;
 }
 
+.side-infor.fixed {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    overflow: scroll;
+}
+
+.heading-on-mobile {
+    display: none;
+}
+
+.heading-on-mobile h3 {
+    margin: 0;
+    text-align: center;
+}
 .news {
     font-size: 1.6rem;
     color: var(--text-color);

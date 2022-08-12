@@ -1,6 +1,6 @@
 @media (max-width : 739px){
     .side-infor {
-        display: none;
+        /* display: none; */
     }
 
     .title-1 {
@@ -80,7 +80,6 @@
         margin: 0;
     }
 
-
     .major-programs {
         flex-direction: column;
         padding: 16px;
@@ -124,6 +123,22 @@
     }
     .facilities {
         margin-top: 8px;
+    }
+
+    button.swipe-btn {
+        display: block;
+    }
+    .side-infor {
+        display: none;
+    }
+
+    .program-desc {
+        padding: 20px;
+    }
+
+    .heading-on-mobile {
+        display: block;
+        text-align: center;
     }
 }
 
