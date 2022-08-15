@@ -18,7 +18,15 @@
         right: 8px;
         bottom: 8px;
     }
-    
+    button.see-more {
+        display: block;
+        width: 50%;
+        margin: 24px auto;
+    }
+
+    button.submit {
+        width: 100%;
+    }
     .infor {
         width: 100%;
     }
@@ -140,5 +148,35 @@
         display: block;
         text-align: center;
     }
+
+
+    .nav-tool {
+        padding: 12px 24px 0 24px;
+        border-radius: 10px;
+        margin: 24px 8px 0;
+    }
+    
+    .nav-tool-item {
+        padding: 12px 22px 20px 22px;
+    }
+    
+    .current {
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .current::before {
+        width: 20px;
+        height: 20px;
+        right: -20px;
+        box-shadow: -10px 10px 0 0 #fff;
+    }
+    
+    .current::after {
+        width: 20px;
+        height: 20px;
+        left: -20px;
+        box-shadow: 10px 10px 0 0 #fff;
+    }
+    
 }
 

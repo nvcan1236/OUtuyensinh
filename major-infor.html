@@ -29,7 +29,7 @@
                 <li class="nav__item"><a href="./index.html" class="nav__item-link">Trang chủ</a></li>
                 <li class="nav__item"><a href="#" class="nav__item-link  underline">Khoa Ngành</a></li>
                 <li class="nav__item"><a href="#" class="nav__item-link">Thông tin tuyển sinh</a></li>
-                <li class="nav__item"><a href="#" class="nav__item-link">Tra cứu</a></li>
+                <li class="nav__item"><a href="./more-infor.html" class="nav__item-link">Tra cứu</a></li>
             </ul>
         </div>
         <div class="header__search">
@@ -204,7 +204,7 @@
                             </div>
 
                             
-                            <li class="faculty-item vertical"><a href="#">
+                            <li class="faculty-item"><a href="#">
                                 <div class="faculty-thumnail">
                                     <img src="./assets/Images/K.DTDB.jpg" alt="">
                                 </div>
@@ -498,6 +498,11 @@
             for(let f of facultyItem) {
                 f.classList.add('vertical')
             }
+        }
+
+        const k = document.querySelector(".nav-tool-item:nth-child(2)")
+        if(document.body.clientWidth < 739 || document.documentElement.clientWidth < 739) {
+            k.innerHTML = "Chương trình CLC"
         }
     </script>
 </body>

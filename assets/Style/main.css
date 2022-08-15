@@ -103,6 +103,7 @@
     list-style-type: none;
     font-size: 1.6rem;
     color: var(--text-color);
+    transition: 0.3s ease;
 }
 
 .notification {
@@ -187,7 +188,6 @@
     padding: 12px 24px 0 24px;
     background-color: var(--main-bg);
     color: #fff;
-    width: 100%;
     font-size: 1.8rem;
     justify-content: center;
     margin-top: 24px;
@@ -202,7 +202,6 @@
 .current {
     background-color: #fff;
     color: var(--text-color);
-    border-radius: 24px;
     font-weight: 600;
     position: relative;
     border-radius: 24px 24px 0 0;

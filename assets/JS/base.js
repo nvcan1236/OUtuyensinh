@@ -64,7 +64,6 @@ window.addEventListener("load", function () {
   
   // nav - tool
   const navItems = document.querySelectorAll(".nav-tool-item");
-  console.log(navItems);
 
   for(var i=0; i < navItems.length; i++) {
       navItems[i].onclick = function() {
@@ -120,19 +119,50 @@ window.addEventListener("load", function () {
     scrollFunction2();
   }
   // chat button
+
+
+
+  // see more button 
+  const notiList = document.querySelectorAll(".program__notifications");
+  const notiItems = [];
+  notiItems[0] = notiList[0].children;
+  notiItems[1] = notiList[1].children;
+  const seeMoreBtn = document.querySelectorAll("button.see-more");
+  function getHeight(arr, n) {
+    let h = 0;
+    for(let i=0; i < n; i++) {
+      if(i < arr.length) {
+        h += arr[i].offsetHeight;
+      }
+    }
+    return h;
+  }
+
+  let n = 3;
+  for(let i=0; i< notiList.length; i++) {
+    let notiListHeight = getHeight(notiItems[i], n);
+    notiList[i].style = `height: ${notiListHeight}px; overflow: hidden;`;
+
+    seeMoreBtn[i].onclick = function() {
+      seeMoreBtn[i].innerHTML = "Xem thêm"
+      n+=3;
+      notiListHeight = getHeight(notiItems[i], n);
+      notiList[i].style = `height: ${notiListHeight}px; overflow: hidden;`;
+      if(n >= notiItems[i].length){
+        seeMoreBtn[i].innerHTML = "Ẩn bớt"
+        n=0;
+      }
+    }
+  }
   // side section on mobile
   const sideInfor = document.querySelector(".side-infor");
   const swipeBtn = document.querySelector(".swipe-left-btn");
   if(document.body.clientWidth < 739 || document.documentElement.clientWidth < 739) {
-    // sideInfor.classList.add("fixed");
-    // sideInfor.classList.add("hide");
     swipeBtn.onclick = function() {
       sideInfor.classList.toggle("fixed");
       swipeBtn.classList.toggle("swipe-left-btn");
       swipeBtn.classList.toggle("swipe-right-btn");
     }
   }
-
-  
 });
 
