@@ -177,6 +177,13 @@
         left: -20px;
         box-shadow: 10px 10px 0 0 #fff;
     }
-    
+    /* trang 4 */
+    .article-list {
+        flex-direction: column;
+    }
+    .article-item {
+        width: 100%;
+        text-align: center;
+    }
 }
 

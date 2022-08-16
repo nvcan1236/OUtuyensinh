@@ -62,18 +62,6 @@ window.addEventListener("load", function () {
     }, 5000);
   }
   
-  // nav - tool
-  const navItems = document.querySelectorAll(".nav-tool-item");
-
-  for(var i=0; i < navItems.length; i++) {
-      navItems[i].onclick = function() {
-          // navItems[i].classList.remove('current');
-          // this.classList.add("current");
-        console.log(navItems);
-        alert("a");
-      };
-  }
-  
   // to top btn
   var toTopBtn = document.querySelector(".to-top");
   var chatBtn = document.querySelector("button.chat-btn");
@@ -97,10 +85,7 @@ window.addEventListener("load", function () {
   toTopBtn.onclick = function() {
     topFunction();
   }
-
-  // window.onscroll = function() {
-  // }
-
+  
   // header 
   var header = document.querySelector("header");
   var headerLogo = document.querySelector(".header__logo");

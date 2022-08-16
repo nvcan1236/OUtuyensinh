@@ -216,7 +216,7 @@ button.swipe-left-btn:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #fff;
+    /* background-color: #fff; */
     z-index: 15;
     display: flex;
     flex-direction: column;
@@ -227,18 +227,19 @@ button.swipe-left-btn:hover {
     
 }
 .dots-loading {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     display: flex;
     justify-content: center;
  }
  
  .dots-loading > div {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 1rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
     background-color: var(--text-color);
-    margin: 0 1rem;
+    margin: 0 0.8rem;
     animation: dotLoading 1.2s forwards infinite linear;
+    opacity: 0.8;
  }
  
  .dots-loading > div:nth-child(2) {
@@ -262,10 +263,9 @@ button.swipe-left-btn:hover {
     }
  }
  .square-loading {
-    width: 120px;
-    height: 120px;
-    padding: 8px;
-    background-color: var(--main-bg);
+    width: 200px;
+    height: 200px;
+    /* background-color: var(--second-bg); */
     color: #fff;
     border-radius: 50%;
   }
@@ -284,6 +284,7 @@ button.swipe-left-btn:hover {
     font-weight: 700;
     margin-top: 24px;
     text-transform: uppercase;
+    color: var(--text-color);
 }
 
 .title-2 {
