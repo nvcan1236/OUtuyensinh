@@ -2,14 +2,14 @@ window.addEventListener("load", function () {
   // loading
   var loader = document.querySelector(".loading");
   this.setTimeout(function() {
-    document.documentElement.scrollTo(0, document.body.scrollHeight);
-    setTimeout(function() {
-      document.documentElement.scrollTo(0, 0);
-    }, 500)
+    // document.documentElement.scrollTo(0, document.body.scrollHeight);
+    // setTimeout(function() {
+    //   document.documentElement.scrollTo(0, 0);
+    // }, 500)
     setTimeout(function() {
       loader.style = "display: none;";
     }, 1000)
-  }, 4000);
+  }, 1000);
 
   // slider
   const slider = document.querySelector(".slider");
@@ -149,5 +149,18 @@ window.addEventListener("load", function () {
       swipeBtn.classList.toggle("swipe-right-btn");
     }
   }
+
+  // wow
+  wow = new WOW(
+  {
+    boxClass:     'wow',     
+    animateClass: 'animate__animated', 
+    offset:       0,          
+    mobile:       true,       
+    live:         true,      
+  }
+  )
+  wow.init();
 });
+
 

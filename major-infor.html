@@ -380,6 +380,36 @@
             </div>
         </div>
     </section>
+    <section>
+        <div class="modal" id="modal">
+            <div class="modal-container">
+                <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+                <div class="major-modal">
+                    <div class="video">
+                        <iframe width="400" height="220" src="https://www.youtube.com/embed/idRUii-Jyug" title="Giới thiệu ngành Công Nghệ Thông Tin - Trường Đại học Mở Tp.HCM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="title">Ngành Công nghệ thông tin</h3>
+                    <p class="content">
+                        <div class="code">Mã ngành: <span>7480201</span></div>
+                        <h3>Nội dung đào tạo:</h3>
+                        <p>
+                            Ngành Công nghệ thông tin đào tạo các cử nhân nắm vững các kiến thức chuyên môn; có khả năng vận hành, quản lý, phát triển các ứng dụng CNTT; đáp ứng nhu cầu nhân lực CNTT trong các lĩnh vực chuyên môn khác nhau.
+                        </p>
+                        <h3>Liên hệ: </h3>
+                        <ul>
+                            <li><span>ĐỊA ĐIỂM HỌC TẬP:</span> 371 Nguyễn Kiệm, phường 3, Quận Gò Vấp, Tp.HCM.</li>
+                            <li><span>VĂN PHÒNG KHOA CÔNG NGHỆ THÔNG TIN</span></li>
+                            <li>Phòng 604, số 35 - 37 Hồ Hảo Hớn, Phường Cô Giang, Quận 1, Tp.HCM</li>
+                            <li><span>Điện thoại:</span> (84-028) 38386603</li>
+                            <li><span>Website:</span> it.ou.edu.vn</li>
+                            <li><span>Email:</span> fcs@ou.edu.vn; doanhoicntt@ou.edu.vn</li>
+                            <li><span>Email:</span><a href=" https://www.facebook.com/tinhocmo"> https://www.facebook.com/tinhocmo</a></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="container">
             <div class="contact-list">
@@ -491,6 +521,21 @@
         if(document.body.clientWidth < 739 || document.documentElement.clientWidth < 739) {
             k.innerHTML = "Chương trình CLC"
         }
+        // modal
+        var majorItems = document.querySelectorAll(".major-item");
+        var modal = document.getElementById("modal");
+        var closeModal = document.querySelector(".close-modal");
+
+        for(let i of majorItems) {
+            i.onclick = function() {
+                modal.style = "display: flex;"
+            }
+        }
+
+        closeModal.onclick = function() {
+            modal.style = "display: none;"
+        }
+
     </script>
 </body>
 </html>

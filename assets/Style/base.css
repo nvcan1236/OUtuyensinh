@@ -1,11 +1,9 @@
 /* variable */
 
 :root {
-    /* --main-bg: #1363DF; */
     --main-bg: #00468f;
     --second-bg: #e8f0fe;
     --text-color: #06283D;
-    /* --main-yellow: #e8ab42c3; */
     --main-yellow: #e8aa42;
 }
 
@@ -200,7 +198,7 @@ button.swipe-left-btn:hover {
 
 .underline::after {
     content: "";
-    background-image: linear-gradient(to right, #e8ab4277, var(--main-yellow), #e8ab4277);
+    background-image: linear-gradient(to right, transparent, var(--main-yellow), transparent);
     position: absolute;
     bottom: 0px;
     z-index: -1;
@@ -303,6 +301,16 @@ button.swipe-left-btn:hover {
 
     to {
         width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
 

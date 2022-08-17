@@ -329,7 +329,7 @@
 .major-item {
     margin-left: 8px;
     transition: 0.25s ease;
-    display: flex;
+    /* display: flex; */
     padding: 8px;
 }
 
@@ -348,6 +348,63 @@
 
 .side-infor-faculty {
     margin-top:97px;
+}
+
+.modal {
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    display: none;
+    transition: 0.3s ease;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal .video {
+    width: 500px;
+    margin: 0 auto;
+    height: 240px;
+}
+
+.code span {
+    color: var(--main-yellow);
+}
+
+.modal h3 {
+    margin-top: 8px;
+}
+
+.modal span {
+    font-weight:600;
+}
+
+.modal-container {
+    max-width: 800px;
+    background-color: #fff;
+    padding: 24px 40px;
+    position: relative;
+    border-radius: 1.6rem;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.modal .title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 16px;
 }
 
 /* * Trang 4 */
@@ -373,11 +430,29 @@
 
 .article-item {
     width: 33.333%;
-    padding: 20px;
-    cursor: pointer;
+    padding: 8px;
+    cursor: pointer;    
+    
 }
 
-.article-item div {
+.article-item:hover >div {
+    box-shadow: 0 4px 16px #ccc;
+    background-color: #EEEEEE;
+}
+
+.article-item:hover img {
+    transform: scale(1.05);
+}
+
+.article-item>div {
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 16px;
+    transition: 0.25s ease;
+}
+
+.article-thumnail {
+    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -386,6 +461,7 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
+    transition: 0.25s ease;
 }
 
 .article-time {
@@ -397,3 +473,4 @@
     font-size: 1.8rem;
     font-weight: 600;
 }
+
