@@ -57,6 +57,13 @@
         width: 6px;
         height: 6px;
     }
+    .form-message {
+        top: 4px;
+        left: 4px;
+        right: 4px;
+    }
+
+/* trang 1 */
     .attraction__infor {
         margin: 30px 20px 0;
     }
@@ -129,15 +136,75 @@
         width: 100%;
         padding: 12px;
     }
+
+    .faculty-item.vertical {
+        margin: 0 8px;
+    }
     .facilities {
         margin-top: 8px;
     }
 
+
+    .side-infor {
+        position:fixed;
+        inset: 0;
+        display: block;
+        inset: 0;
+        left: 100%;
+        z-index: 10;
+        background-color: #fff;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        overflow: scroll;
+    }
+
+    .side-infor.fixed {
+        left: 0;
+    }
+
+        
     button.swipe-btn {
         display: block;
+        width: 30px;
+        transition: all 0.3s ease;
+
     }
-    .side-infor {
-        display: none;
+    button.swipe-left-btn {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 12;
+        background-color: var(--main-yellow);
+        padding: 24px 6px;
+        opacity: 0.3;
+        transition: 0.2s ease;
+        box-shadow: none;
+        border-radius: 12px 0 0 12px;
+        right: 0;
+    }
+    .swipe-right-btn {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 12;
+        background-color: var(--main-yellow);
+        padding: 24px 6px;
+        opacity: 1;
+        transition: 0.2s ease;
+        box-shadow: none;
+        /* left: 0; */
+        right: calc(100% - 30px);
+        border-radius: 0 12px 12px 0;
+
+    }
+
+    .swipe-right-btn i {
+        transform: scaleX(-1);
+    }
+
+    button.swipe-left-btn:hover {
+        opacity: 1
     }
 
     .program-desc {
@@ -177,12 +244,29 @@
         left: -20px;
         box-shadow: 10px 10px 0 0 #fff;
     }
+
+    .modal-container {
+        width: 100%;
+        padding: 40px 16px 16px;
+        margin: 4px 8px;
+    }
+    .modal .video {
+        width: 100%;
+    }
+    .close-modal {
+        top: 4px;
+        right: 4px;
+        margin: 0;
+    }
     /* trang 4 */
     .article-list {
         flex-direction: column;
     }
     .article-item {
         width: 100%;
+        text-align: center;
+    }
+    .topic-item>h3 {
         text-align: center;
     }
 }

@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
     setTimeout(function() {
       loader.style = "display: none;";
     }, 1000)
-  }, 1000);
+  }, 0);
 
   // slider
   const slider = document.querySelector(".slider");
@@ -62,7 +62,7 @@ window.addEventListener("load", function () {
     }, 5000);
   }
   
-  // to top btn
+  // to top btn and chat btn
   var toTopBtn = document.querySelector(".to-top");
   var chatBtn = document.querySelector("button.chat-btn");
 
@@ -103,9 +103,80 @@ window.addEventListener("load", function () {
     scrollFunction();
     scrollFunction2();
   }
-  // chat button
+
+  // validation form
+
+  var formInput = document.querySelectorAll(".form-input"); 
+  var formValue = [];
+  var submitBtn = document.querySelector("button.submit");
+  var formMessageList = document.querySelector(".form-message-list");
+  var formMessage = document.querySelector(".form-message");
+  var formMessageText = document.querySelector(".message-text");
+
+  for(var i of formInput) {
+    i.onchange = function() {
+      for(var i=0; i<formInput.length; i++) {
+        formValue[i] = formInput[i].value;
+      }
+    }
+  }
+
+  function checkForm(form) {
+    var count= 0;
+    for(var i=0; i<form.length; i++) {
+      if(form[i] != "")
+        count++;
+    }
+    return count;
+  }
+  submitBtn.onclick = function() {
+    var count = checkForm(formValue);
+    console.log(count, formValue.length);
+    if(count>0 && count === formValue.length && count != undefined) {
+      formMessage.classList.add("success","message-show")
+      formMessageText.innerHTML = `<h3>Thành công</h3> Bạn đã đăng kí nhận tư vấn thành công.`;
+      setTimeout(function() {
+        formMessage.classList.remove("success", "message-show");
+      }, 3000)
+    }
+    else {
+      formMessage.classList.add("fail","message-show")
+      formMessageText.innerHTML = `<h3>Thất bại! </h3> Bạn vui lòng điền đày đủ thông tin.`;
+      setTimeout(function() {
+        formMessage.classList.remove("fail", "message-show");
+      }, 3000)
+    }
+  }
 
 
+  // search autocomplete
+  // ! chưa hoàn thiện
+
+  var searchInput = document.querySelector(".search__input");
+  var searchBtn = document.querySelector(".search__icon");
+  var suggestList = document.querySelector(".suggestions")
+  const keywords = ["Khoa Công nghệ thông tin", "Khoa Ngoại ngữ", "Khoa Xây dựng", "Ngành Công nghệ thông tin", "Ngành Hệ thống thông tin", "Ngành Khoa học máy tính", ];
+  
+  searchInput.onkeyup = function(){
+    var h="";
+    let input = searchInput.value.toLowerCase();
+    for(let k of keywords) {
+      if(k.toLowerCase().indexOf(input)>=0) {
+        h+=` <li class="suggest-item">${k}</li>`
+      }
+      else {
+      }
+      if(h!="") {
+        suggestList.innerHTML = h;
+        suggestList.style = "display: block;"
+      }
+    }
+    
+    console.log(h);
+    searchBtn.onclick = function() {
+
+    }
+  }
 
   // see more button 
   const notiList = document.querySelectorAll(".program__notifications");
@@ -145,6 +216,8 @@ window.addEventListener("load", function () {
   if(document.body.clientWidth < 739 || document.documentElement.clientWidth < 739) {
     swipeBtn.onclick = function() {
       sideInfor.classList.toggle("fixed");
+      // sideInfor.style = `transform: translateX(0)`;
+
       swipeBtn.classList.toggle("swipe-left-btn");
       swipeBtn.classList.toggle("swipe-right-btn");
     }

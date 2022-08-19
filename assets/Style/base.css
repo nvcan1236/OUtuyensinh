@@ -23,8 +23,6 @@ html {
 
 body {
     font-size: 1.6rem;
-    /* overflow: hidden; */
-    /* width: 100vw; */
 }
 
 a {
@@ -61,6 +59,12 @@ button:hover {
 button.primary {
     background-color: var(--main-bg);
     color: #fff;
+    box-shadow: var(--text-color) 3px 3px 0;
+}
+
+button.primary:active {
+    transform: translate(3px, 3px);
+    box-shadow: var(--text-color) 0 0 0;
 }
 
 button.primary:hover {
@@ -157,37 +161,6 @@ button.to-top:hover {
 
 button.swipe-btn {
     display: none;
-}
-button.swipe-left-btn {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 12;
-    background-color: var(--main-yellow);
-    padding: 24px 6px;
-    opacity: 0.3;
-    transition: 0.2s ease;
-    box-shadow: none;
-    border-radius: 12px 0 0 12px;
-    right: 0;
-}
-.swipe-right-btn {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 12;
-    background-color: var(--main-yellow);
-    padding: 24px 6px;
-    opacity: 0.3;
-    transition: 0.2s ease;
-    box-shadow: none;
-    left: 0;
-    border-radius: 12px 0 0 12px;
-    transform: scaleX(-1);
-}
-
-button.swipe-left-btn:hover {
-    opacity: 1
 }
 /* underline */
 
@@ -414,6 +387,10 @@ header.fixed {
     z-index: 1;
 }
 
+.nav__item-link:hover {
+    color: #fff;
+}
+
 
 .nav__item-link::after {
     content: "";
@@ -437,25 +414,30 @@ header.fixed {
 }
 
 .search {
-    border-radius: 15px;
-    overflow: hidden;
+    border-radius: 8px;
+    /* overflow: hidden; */
     display: flex;
+    flex: 1;
+    position: relative;
 }
 
 .search__input {
-    max-width: 220px;
+    width: 240px;
     padding: 6px 20px;
     font-size: 1.4rem;
     outline: none;
     border: none;
     font-family: 'Open Sans', sans-serif;
+    border-radius: 8px 0 0 8px;
     color: var(--text-color);
 }
 
+
 .search__icon {
-    padding: 6px 12px 6px 8px;
+    padding: 6px 16px;
     background-color: var(--main-yellow);
     cursor: pointer;
+    border-radius: 0 8px 8px 0;
 }
 
 .fa-magnifying-glass:before, .fa-search:before {
@@ -464,6 +446,35 @@ header.fixed {
     font-size: 1.6rem;
     position: relative;
     top: 1px;
+}
+
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 15;
+    background-color: #fff;
+    margin-top: 4px;
+    border-radius: 4px;
+    color: var(--text-color);
+    padding: 8px;
+    box-shadow: 3px 3px 8px #333;
+    display: none;
+}
+
+.suggest-item {
+    padding: 8px 16px;
+    /* transition: 0.25s ease; */
+    border-radius: 8px;
+}
+
+.suggest-item:hover {
+    font-weight: 500;
+
+}
+
+.suggest-item+.suggest-item {
 }
 
 /* slider */
@@ -564,6 +575,7 @@ header.fixed {
     margin-top: 54px;
 }
 
+
 /* side infor */
 
 .side-infor {
@@ -572,20 +584,6 @@ header.fixed {
     transition: all 0.3s ease;
 }
 
-.side-infor.fixed {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-    background-color: #fff;
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    overflow: scroll;
-}
 
 .heading-on-mobile {
     display: none;
@@ -720,6 +718,62 @@ select {
 
 textarea {
     resize: vertical;
+}
+
+.form-message {
+    position: fixed;
+    top: 84px;
+    right: 20px;
+    display: flex;
+    align-items: stretch;
+    border-radius: 6px;
+    width: 360px;
+    overflow: hidden;
+    border: 1px solid ;
+    font-size: 1.4rem;
+    transform: translateX(400px);
+    transition: 0.3s ease;
+    opacity: 0;
+}
+.message-show {
+    transform: translateX(0);
+    opacity: 1;
+}
+.form-message.success {
+    background-color: #eaf7ee;
+    border-color: #3fbf62;
+}
+
+.form-message.fail {
+    background-color: #fcede9;
+    border-color: #ea4e2c;
+}
+
+.form-message.success .message-icon {
+    color: #3fbf62;
+    border-color: #3fbf62;
+}
+
+.form-message.fail .message-icon {
+    color: #ea4e2c;
+    border-color: #ea4e2c;
+}
+
+.message-icon {
+    border-left: 4px solid;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.message-text {
+    flex: 1;
+    padding: 20px 10px;
+}
+
+.message-text>h3 {
+    margin-bottom: 4px;
 }
 
 /* footer */
