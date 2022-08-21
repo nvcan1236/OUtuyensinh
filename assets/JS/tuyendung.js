@@ -120,6 +120,17 @@ window.addEventListener("load", function () {
     )
     wow.init();
     // chat button
+  // side section on mobile
+  const sideInfor = document.querySelector(".side-infor");
+  const swipeBtn = document.querySelector(".swipe-left-btn");
+  if(document.body.clientWidth < 739 || document.documentElement.clientWidth < 739) {
+    swipeBtn.onclick = function() {
+      sideInfor.classList.toggle("fixed");
+      // sideInfor.style = `transform: translateX(0)`;
 
+      swipeBtn.classList.toggle("swipe-left-btn");
+      swipeBtn.classList.toggle("swipe-right-btn");
+    }
+  }
     
   });

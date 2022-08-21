@@ -18,82 +18,6 @@
     margin-top: 54px;
 }
 
-/* form  */
-
-.form {
-    margin-top: 12px;
-    padding: 20px;
-    border: 2px solid var(--text-color);
-    border-radius: 4px;
-    background-color: #e8f0fe;
-}
-
-.form-field {
-    position: relative;
-    margin-top: 16px;
-}
-
-.form-input {
-    border-radius: 4px;
-    border: 2px solid var(--text-color);
-    width: 100%;
-    padding: 12px 20px;
-    outline: none;
-    transition: all 0.25s ease;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.6rem;
-    color: var(--text-color);
-}
-
-select.form-input {
-    padding: 12px 16px;
-}
-
-.form-input:not(:placeholder-shown),
-.form-input:focus {
-    border-color: var(--main-bg);
-    font-weight: 500;
-    background-color: #e8f0fe;
-}
-
-.form-input {
-
-}
-
-.form-label {
-    font-size: 1.6rem;
-    position: absolute;
-    left: 21px;
-    top: 50%;
-    transform: translateY(-50%);
-    user-select: none;
-    color: #999;
-    pointer-events: none;
-    transition: 0.25s ease;
-}
-
-textarea.form-input + .form-label {
-    top: 24px;
-}
-
-.form-input:not(:placeholder-shown) + .form-label,
-.form-input:focus + .form-label {
-    background-color: #e8f0fe;
-    top: 0%;
-    left: 11px;
-    display: inline-block;
-    padding: 0 10px;
-    color: var(--main-bg);
-    font-weight: 500;
-}
-
-select {
-    padding: 0 18px;
-}
-
-textarea {
-    resize: vertical;
-}
 /* section */
 
 div.banner img{
@@ -103,6 +27,11 @@ div.banner img{
 
 .flex{
     display:flex;
+    flex-wrap: wrap;
+}
+.tuyensinh .container .flex {
+    /* flex-direction: column; */
+    flex-wrap: nowrap;
 }
 .gioithieu{
     background-color: #e8f0fe;
@@ -119,15 +48,6 @@ div.banner img{
     padding: 18px 0 8px 0;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
 .col{
     position: relative;
     width: 100%;
@@ -154,6 +74,10 @@ div.choose > div{
 .tuyensinh{
     margin-top: 2em;
     margin-bottom: 2em;
+}
+
+.tuyensinh .container>.flex>div:first-child  {
+    max-width: 50%;
 }
 
 .sub{
@@ -205,6 +129,7 @@ ul.tuyensinh-text{
 ul.tuyensinh-text > li a:hover{
     color:var(--main-yellow);
 }
+
 .section_items{
     max-width: 25%;
     padding-right: 15px;
@@ -275,7 +200,7 @@ div.section_item{
     border-radius: 50%;
 }
 .main_content{
-    width: 580px;
+    max-width: 580px;
     height: 180px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -391,10 +316,10 @@ a:hover{
 /* new */
 .Register{
     padding: 34px 0;
-    background-image: url(../assets/Images/collab.avif);
+    background-image: url(../Images/collab.avif);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
     background-color:#eff0ef ;
     background-attachment: fixed;
 }

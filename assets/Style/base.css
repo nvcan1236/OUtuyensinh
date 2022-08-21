@@ -102,6 +102,11 @@ button.submit {
     margin-left: auto;
 }
 
+.space {
+    display: inline-block;
+    width: 40px;
+}
+
 button.to-top {
     position: fixed;
     right: 24px;
@@ -183,10 +188,7 @@ button.swipe-btn {
 /* loading */
 .loading {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     /* background-color: #fff; */
     z-index: 15;
     display: flex;
@@ -356,6 +358,10 @@ header.fixed {
     height: 80px;
 }
 
+.menu-icon {
+    display: none;
+}
+
 .header__logo {
     height: 100%;
 }
@@ -467,11 +473,12 @@ header.fixed {
     padding: 8px 16px;
     /* transition: 0.25s ease; */
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .suggest-item:hover {
     font-weight: 500;
-
+    background-color: var(--second-bg);
 }
 
 .suggest-item+.suggest-item {

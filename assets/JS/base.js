@@ -1,11 +1,11 @@
 window.addEventListener("load", function () {
   // loading
   var loader = document.querySelector(".loading");
-  this.setTimeout(function() {
+  setTimeout(function() {
     // document.documentElement.scrollTo(0, document.body.scrollHeight);
-    // setTimeout(function() {
-    //   document.documentElement.scrollTo(0, 0);
-    // }, 500)
+    setTimeout(function() {
+      document.documentElement.scrollTo(0, 0);
+    }, 500)
     setTimeout(function() {
       loader.style = "display: none;";
     }, 1000)
@@ -131,7 +131,6 @@ window.addEventListener("load", function () {
   }
   submitBtn.onclick = function() {
     var count = checkForm(formValue);
-    console.log(count, formValue.length);
     if(count>0 && count === formValue.length && count != undefined) {
       formMessage.classList.add("success","message-show")
       formMessageText.innerHTML = `<h3>Thành công</h3> Bạn đã đăng kí nhận tư vấn thành công.`;
@@ -155,8 +154,8 @@ window.addEventListener("load", function () {
   var searchInput = document.querySelector(".search__input");
   var searchBtn = document.querySelector(".search__icon");
   var suggestList = document.querySelector(".suggestions")
+  var suggestItem = document.querySelectorAll(".suggest-item");
   const keywords = ["Khoa Công nghệ thông tin", "Khoa Ngoại ngữ", "Khoa Xây dựng", "Ngành Công nghệ thông tin", "Ngành Hệ thống thông tin", "Ngành Khoa học máy tính", ];
-  
   searchInput.onkeyup = function(){
     var h="";
     let input = searchInput.value.toLowerCase();
@@ -164,17 +163,27 @@ window.addEventListener("load", function () {
       if(k.toLowerCase().indexOf(input)>=0) {
         h+=` <li class="suggest-item">${k}</li>`
       }
-      else {
+      if(h=="" || input =="") {
+        suggestList.style = "display: none;"
       }
-      if(h!="") {
+      else {
         suggestList.innerHTML = h;
         suggestList.style = "display: block;"
+        $(".suggestions").on("click","li", function() {
+          searchInput.value = this.innerText;
+          suggestList.style = "display: none;"
+          
+          searchBtn.onclick = function() {
+            // suggestList.style = "display: none;"
+            searchInput.value = "";
+          }
+        })
+        searchInput.onblur = function() {
+          setTimeout(function() {
+            suggestList.style = "display: none;"
+          }, 300)
+        }
       }
-    }
-    
-    console.log(h);
-    searchBtn.onclick = function() {
-
     }
   }
 
@@ -213,6 +222,8 @@ window.addEventListener("load", function () {
   // side section on mobile
   const sideInfor = document.querySelector(".side-infor");
   const swipeBtn = document.querySelector(".swipe-left-btn");
+  const menuBtn = document.querySelector(".menu-icon");
+  const menu = document.querySelector(".header__menu");
   if(document.body.clientWidth < 739 || document.documentElement.clientWidth < 739) {
     swipeBtn.onclick = function() {
       sideInfor.classList.toggle("fixed");
@@ -220,6 +231,9 @@ window.addEventListener("load", function () {
 
       swipeBtn.classList.toggle("swipe-left-btn");
       swipeBtn.classList.toggle("swipe-right-btn");
+    }
+    menuBtn.onclick = function() {
+      menu.classList.toggle("menu-show");
     }
   }
 
