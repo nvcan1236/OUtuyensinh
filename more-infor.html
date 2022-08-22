@@ -23,20 +23,26 @@
         <div class="header__logo">
             <img src="./assets/Images/logo.png" alt="">
         </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
         <div class="header__menu">
+            
             <ul class="nav__list">
-                <li class="nav__item"><a href="./index.html" class="nav__item-link">Trang chủ</a></li>
+                <li class="nav__item"><a href="./index.html" class="nav__item-link ">Trang chủ</a></li>
                 <li class="nav__item"><a href="./major-infor.html" class="nav__item-link">Khoa Ngành</a></li>
                 <li class="nav__item"><a href="./Thongtinxettuyen.html" class="nav__item-link">Thông tin tuyển sinh</a></li>
-                <li class="nav__item"><a href="#" class="nav__item-link  underline">Tra cứu</a></li>
+                <li class="nav__item"><a href="./more-infor.html" class="nav__item-link underline">Tra cứu</a></li>
             </ul>
         </div>
         <div class="header__search">
             <div class="search">
-                <input type="text" class="search__input" placeholder="Tìm kiếm ...">
+                <input type="text" class="search__input" placeholder="Tìm kiếm ..." >
                 <div class="search__icon">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
+                <ul class="suggestions">
+                </ul>
             </div>
         </div>
     </header>
@@ -201,50 +207,9 @@
             </div>
         </div>
     </footer>
-    <script> 
-        function init() {
-            // to top btn
-            var toTopBtn = document.querySelector(".to-top");
-            var chatBtn = document.querySelector("button.chat-btn");
 
-            function scrollFunction() {
-                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                toTopBtn.classList.add("show");
-                chatBtn.style = "bottom: 84px;"
-                }
-                else {
-                toTopBtn.classList.remove("show");
-                chatBtn.style = "bottom: 24px;"
-                }
-            }
-
-            function topFunction() {
-                document.body.scrollTo(0, 0); // For Safari
-                document.documentElement.scrollTo(0, 0); // For Chrome, Firefox, IE and Opera
-            }
-
-            toTopBtn.onclick = function() {
-                topFunction();
-            }
-
-            // header
-            var header = document.querySelector("header");
-            var headerLogo = document.querySelector(".header__logo");
-            function scrollFunction2() {
-                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                header.classList.add("fixed");
-                headerLogo.style = "display: none;"
-                }
-                else {
-                header.classList.remove("fixed");
-                headerLogo.style = "display: block;"
-                }
-            }
-            window.onscroll = function() {
-                scrollFunction();
-                scrollFunction2();
-            }
-        }
-    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./assets/JS/p4.js"></script>
 </body>
 </html>

@@ -149,7 +149,6 @@ window.addEventListener("load", function () {
 
 
   // search autocomplete
-  // ! chưa hoàn thiện
 
   var searchInput = document.querySelector(".search__input");
   var searchBtn = document.querySelector(".search__icon");

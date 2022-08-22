@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="./assets/Style/base.css">
     <link rel="stylesheet" href="./assets/Style/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <script src ="./assets/JS/tuyendung.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ciar4n/izmir@1.0.1/izmir.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src ="./assets/JS/tuyendung.js"></script>
 
 </head>
 <body>
@@ -23,20 +24,26 @@
         <div class="header__logo">
             <img src="./assets/Images/logo.png" alt="">
         </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
         <div class="header__menu">
+            
             <ul class="nav__list">
                 <li class="nav__item"><a href="./index.html" class="nav__item-link ">Trang chủ</a></li>
                 <li class="nav__item"><a href="./major-infor.html" class="nav__item-link">Khoa Ngành</a></li>
-                <li class="nav__item"><a href="#" class="nav__item-link underline" >Thông tin tuyển sinh</a></li>
+                <li class="nav__item"><a href="./Thongtinxettuyen.html" class="nav__item-link underline">Thông tin tuyển sinh</a></li>
                 <li class="nav__item"><a href="./more-infor.html" class="nav__item-link">Tra cứu</a></li>
             </ul>
         </div>
         <div class="header__search">
             <div class="search">
-                <input type="text" class="search__input" placeholder="Tìm kiếm...">
+                <input type="text" class="search__input" placeholder="Tìm kiếm ..." >
                 <div class="search__icon">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
+                <ul class="suggestions">
+                </ul>
             </div>
         </div>
     </header>
@@ -397,8 +404,8 @@
                         <!--xem them-->
                     </div>
                     <div class ="border">
-                        <div class="register-form side-section">    
-                            <h3 class="title-1 register-form__heading ">CÂU HỎI TUYỂN SINH</h3>
+                        <div class="register-form side-section">
+                            <h3 class="title-1 register-form__heading">CÂU HỎI TUYỂN SINH</h3>
                             <div class="register-form__input  form">
                                 <h1 class="title-2">Đăng kí nhận thông tin: </h1>
                                 <div class="register-form__input-item form-field">
@@ -428,6 +435,17 @@
                                     <label for="register-question" class="form-label">Message</label>
                                 </div>
                                 <button class="primary submit">Gửi</button>
+                            </div>
+                            <div class="form-message-list">
+                                <div class="form-message">
+                                    <div class="message-icon">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <!-- <i class="fa-solid fa-circle-exclamation"></i> -->
+                                    </div>
+                                    <div class="message-text">
+                                        
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

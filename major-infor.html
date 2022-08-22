@@ -28,19 +28,22 @@
             <i class="fa-solid fa-bars"></i>
         </div>
         <div class="header__menu">
+            
             <ul class="nav__list">
-                <li class="nav__item"><a href="./index.html" class="nav__item-link">Trang chủ</a></li>
-                <li class="nav__item"><a href="#" class="nav__item-link  underline">Khoa Ngành</a></li>
+                <li class="nav__item"><a href="./index.html" class="nav__item-link ">Trang chủ</a></li>
+                <li class="nav__item"><a href="./major-infor.html" class="nav__item-link underline">Khoa Ngành</a></li>
                 <li class="nav__item"><a href="./Thongtinxettuyen.html" class="nav__item-link">Thông tin tuyển sinh</a></li>
                 <li class="nav__item"><a href="./more-infor.html" class="nav__item-link">Tra cứu</a></li>
             </ul>
         </div>
         <div class="header__search">
             <div class="search">
-                <input type="text" class="search__input" placeholder="Tìm kiếm ...">
+                <input type="text" class="search__input" placeholder="Tìm kiếm ..." >
                 <div class="search__icon">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
+                <ul class="suggestions">
+                </ul>
             </div>
         </div>
     </header>
@@ -49,9 +52,9 @@
             <div class="infor">
                 <nav>
                     <ul class="nav-tool">
-                    <li class="nav-tool-item current" onclick="changeProgram(1)">Chương trình đại trà</li>
-                    <li class="nav-tool-item" onclick="changeProgram(2)">Chương trình Chất lượng cao</li>
-                    <li class="nav-tool-item" onclick="changeProgram(3)">Chương trình liên kết</li>
+                        <li class="nav-tool-item current" onclick="changeProgram(1)">Chương trình đại trà</li>
+                        <li class="nav-tool-item" onclick="changeProgram(2)">Chương trình Chất lượng cao</li>
+                        <li class="nav-tool-item" onclick="changeProgram(3)">Chương trình liên kết</li>
                     </ul>
                 </nav>
                 <div class="faculty">
@@ -291,7 +294,13 @@
                 </div>
 
             </div>
+
+            <button class="swipe-left-btn swipe-btn"><i class="fa-solid fa-angles-left"></i></button>
             <div class="side-infor">
+                <div class="heading-on-mobile">
+                    <h3 class="title-1">KHÁM PHÁ OU</h3>
+                </div>
+
                 <div class="news side-section">
                     <h3 class="news__title title-1">TIN TỨC</h3>
                     <ul class="news__list">
@@ -344,10 +353,12 @@
 
                     </ul>
                 </div>
+
                 <div class="video side-section">
                     <h3 class="video__title title-1">VIDEOS</h3>
                     <iframe width="350" height="200" src="https://www.youtube.com/embed/Us1okcXiHpA" title="Giới thiệu Trường ĐH Mở TP. Hồ Chí Minh" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
+
                 <div class="register-form side-section">
                     <h3 class="title-1 register-form__heading">CÂU HỎI TUYỂN SINH</h3>
                     <div class="register-form__input  form">
@@ -380,7 +391,19 @@
                         </div>
                         <button class="primary submit">Gửi</button>
                     </div>
+                    <div class="form-message-list">
+                        <div class="form-message">
+                            <div class="message-icon">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <!-- <i class="fa-solid fa-circle-exclamation"></i> -->
+                            </div>
+                            <div class="message-text">
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="fan-page side-section">
                     <h3 class="video__title title-1">GROUPS FB</h3>
                     <a href="https://www.facebook.com/groups/oumembers"><img src="./assets/Images/fanpage.jpg" alt="" class="fanpage-img"></a>
@@ -388,6 +411,7 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="modal" id="modal">
             <div class="modal-container">
@@ -418,6 +442,7 @@
             </div>
         </div>
     </section>
+
     <footer>
         <div class="container">
             <div class="contact-list">
@@ -463,6 +488,10 @@
     </footer>
         <button class="chat-btn"><i class="fa-brands fa-facebook-messenger"></i></button>
         <button class="to-top"><a href="#"><i class="fa-solid fa-circle-up"></i></a></button>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./assets/JS/p2.js"></script>
     <script>
         const navItems = document.querySelectorAll(".nav-tool-item");
         const facultyItems = document.querySelectorAll(".faculty-list");
@@ -475,75 +504,6 @@
             navItems[n-1].classList.add("current");      
             facultyItems[n-1].style.display = 'block';
         }
-        // to top btn
-        var toTopBtn = document.querySelector(".to-top");
-        var chatBtn = document.querySelector("button.chat-btn");
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            toTopBtn.classList.add("show");
-            chatBtn.style = "bottom: 84px;"
-            }
-            else {
-            toTopBtn.classList.remove("show");
-            chatBtn.style = "bottom: 24px;"
-            }
-        }
-
-        function topFunction() {
-            document.body.scrollTo(0, 0); // For Safari
-            document.documentElement.scrollTo(0, 0); // For Chrome, Firefox, IE and Opera
-        }
-
-        toTopBtn.onclick = function() {
-            topFunction();
-        }
-
-        // header
-        var header = document.querySelector("header");
-        var headerLogo = document.querySelector(".header__logo");
-        function scrollFunction2() {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-            header.classList.add("fixed");
-            headerLogo.style = "display: none;"
-            }
-            else {
-            header.classList.remove("fixed");
-            headerLogo.style = "display: block;"
-            }
-        }
-        window.onscroll = function() {
-            scrollFunction();
-            scrollFunction2();
-        }
-        // major list on mobile
-        const facultyItem = document.querySelectorAll('.faculty-item');
-
-        if(document.body.clientWidth < 739 || document.documentElement.clientWidth < 739) {
-            for(let f of facultyItem) {
-                f.classList.add('vertical')
-            }
-        }
-
-        const k = document.querySelector(".nav-tool-item:nth-child(2)")
-        if(document.body.clientWidth < 739 || document.documentElement.clientWidth < 739) {
-            k.innerHTML = "Chương trình CLC"
-        }
-        // modal
-        var majorItems = document.querySelectorAll(".major-item");
-        var modal = document.getElementById("modal");
-        var closeModal = document.querySelector(".close-modal");
-
-        for(let i of majorItems) {
-            i.onclick = function() {
-                modal.style = "display: flex;"
-            }
-        }
-
-        closeModal.onclick = function() {
-            modal.style = "display: none;"
-        }
-
     </script>
 </body>
 </html>
