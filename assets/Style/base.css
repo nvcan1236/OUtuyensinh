@@ -189,14 +189,13 @@ button.swipe-btn {
 .loading {
     position: fixed;
     inset: 0;
-    /* background-color: #fff; */
     z-index: 15;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: all 1s ease;
-    background-image: linear-gradient(to right bottom, var(--text-color), var(--main-bg), var(--main-yellow), #FFF8BC);
+    background-image: linear-gradient(155deg, var(--text-color), var(--main-bg), var(--main-yellow), #FFF8BC);
     
 }
 .dots-loading {
