@@ -50,20 +50,7 @@ window.addEventListener("load", function () {
         changeSlide(1);
       }, 5000);
     }
-    
-    // nav - tool
-    const navItems = document.querySelectorAll(".nav-tool-item");
-    console.log(navItems);
-  
-    for(var i=0; i < navItems.length; i++) {
-        navItems[i].onclick = function() {
-            // navItems[i].classList.remove('current');
-            // this.classList.add("current");
-          console.log(navItems);
-          alert("a");
-        };
-    }
-    
+
     // to top btn
     var toTopBtn = document.querySelector(".to-top");
     var chatBtn = document.querySelector("button.chat-btn");
@@ -87,9 +74,6 @@ window.addEventListener("load", function () {
     toTopBtn.onclick = function() {
       topFunction();
     }
-  
-    // window.onscroll = function() {
-    // }
   
     // header 
     var header = document.querySelector("header");
@@ -152,17 +136,6 @@ window.addEventListener("load", function () {
       }
     }
 
-
-      wow = new WOW(
-        {
-          boxClass:     'wow',     
-          animateClass: 'animate__animated', 
-          offset:       0,          
-          mobile:       true,       
-          live:         true,      
-        }
-      )
-      wow.init();
       // chat button
       const sideInfor = document.querySelector(".side-infor");
       const swipeBtn = document.querySelector(".swipe-left-btn");
@@ -187,7 +160,7 @@ window.addEventListener("load", function () {
     var searchBtn = document.querySelector(".search__icon");
     var suggestList = document.querySelector(".suggestions")
     var suggestItem = document.querySelectorAll(".suggest-item");
-    const keywords = ["Khoa Công nghệ thông tin", "Khoa Ngoại ngữ", "Khoa Xây dựng", "Ngành Công nghệ thông tin", "Ngành Hệ thống thông tin", "Ngành Khoa học máy tính", ];
+    const keywords = ["Khoa Công nghệ thông tin", "Khoa Ngoại ngữ", "Khoa Xây dựng", "Ngành Công nghệ thông tin", "Ngành Hệ thống thông tin", "Ngành Khoa học máy tính",];
     searchInput.onkeyup = function(){
       var h="";
       let input = searchInput.value.toLowerCase();
@@ -218,4 +191,15 @@ window.addEventListener("load", function () {
       }
     }
     
+    // wow js
+    wow = new WOW(
+      {
+        boxClass:     'wow',     
+        animateClass: 'animate__animated', 
+        offset:       0,          
+        mobile:       true,       
+        live:         true,      
+      }
+    )
+    wow.init();
   });
