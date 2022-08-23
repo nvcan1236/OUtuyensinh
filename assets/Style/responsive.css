@@ -171,7 +171,7 @@
     .socials {
         margin-bottom: 12px;
     }
-
+/* trang 2 */
     .facility-list, .contact-list {
         width: 100%;
         padding: 12px;
@@ -184,6 +184,9 @@
         margin-top: 8px;
     }
 
+    .program-intro {
+        padding: 0 20px;
+    }
 
     .side-infor {
         position:fixed;
@@ -309,9 +312,12 @@
         text-align: center;
     }
 
-    /* trang 4 */
+    /* trang 3 */
     .gioithieu {
         font-size: 1.2rem;
+    }
+    .tracuu{
+        padding: 18px 0 8px 10px;
     }
 
     .choose {
