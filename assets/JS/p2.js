@@ -177,3 +177,15 @@ window.onload = function(){
 
         
 }
+// navigation
+const navItems = document.querySelectorAll(".nav-tool-item");
+        const facultyItems = document.querySelectorAll(".faculty-list");
+
+        function changeProgram(n) {
+            for(let j=0; j < navItems.length; j++) {
+                navItems[j].classList.remove('current');
+                facultyItems[j].style.display = 'none';
+            }
+            navItems[n-1].classList.add("current");      
+            facultyItems[n-1].style.display = 'block';
+        }
