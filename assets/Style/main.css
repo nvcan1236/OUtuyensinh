@@ -79,7 +79,7 @@
     background-color: var(--main-yellow);
 }
 
-/* chương trình đào tạo */
+/** chương trình đào tạo */
 
 .program {
 }
@@ -129,7 +129,7 @@
     padding: 16px 0;
 }
 
-/* Khoa Ngành */
+/** Khoa Ngành */
 
 .major-programs {
     display: flex;
@@ -371,7 +371,7 @@
     right: 0;
     bottom: 0;
     z-index: 20;
-    overflow: scroll;
+    overflow-y: scroll;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -559,7 +559,7 @@ strong {
     margin: 0;
 }
 
-/* hoc bong */
+/** hoc bong */
 
 .text-hocbong{
     text-align: center;
